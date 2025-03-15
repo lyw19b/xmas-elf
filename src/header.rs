@@ -394,6 +394,7 @@ impl Machine_ {
             0xB7 => Machine::AArch64,
             0xF3 => Machine::RISC_V,
             0xF7 => Machine::BPF,
+            0x102 => Machine::LoongArch,
             other => Machine::Other(other),
         }
     }
@@ -419,6 +420,7 @@ pub enum Machine {
     X86_64,
     AArch64,
     RISC_V,
+    LoongArch,
     BPF,
     Other(u16), // FIXME there are many, many more of these
 }
